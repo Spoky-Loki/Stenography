@@ -152,7 +152,7 @@ message_bits_array = get_bits_array_of_message(message_array)
 chunked_main_array = chunk_array(main_bits_array, N)
 chunked_message_array = chunk_array(message_bits_array, K)
 
-if chunked_main_array < chunked_message_array:
+if len(chunked_main_array) < len(chunked_message_array):
     print('The message is too large!')
     sys.exit()
 
